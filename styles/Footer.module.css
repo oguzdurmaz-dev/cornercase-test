@@ -2,8 +2,22 @@
   border-top: 2px solid #515561;
   background-color: #22222b;
   color: #a2abbd;
-  border-radius:0 0 50px 50px;
+  border-radius: 0 0 50px 50px;
   box-shadow: 0 40px 40px black;
   min-height: 160px;
- 
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+}
+.current {
+  font-size: 44px;
+  font-weight: normal;
+  color: #a2abbd;margin:0;padding:0;width: 100%;
+}
+.subHead {
+  font-size: 22px;
+  color: #edae61;
+  width: 100%;
 }
