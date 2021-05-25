@@ -1,0 +1,10 @@
+.header{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    height: 165px;
+    background-color: #edad61;
+    padding: 0 40px;
+    border-radius: 50px 50px 0 0;
+}
+.header h1 {color:white;font-size: 44px;}

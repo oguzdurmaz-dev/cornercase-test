@@ -1,0 +1,9 @@
+.footer {
+  border-top: 2px solid #515561;
+  background-color: #22222b;
+  color: #a2abbd;
+  border-radius:0 0 50px 50px;
+  box-shadow: 0 40px 40px black;
+  min-height: 160px;
+ 
+}

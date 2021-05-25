@@ -1,0 +1,7 @@
+.layout {
+  width: 640px;
+  background-color: #2f2f3a;
+  margin:50px auto 100px auto;
+  min-height: 600px;
+  border-radius: 50px;
+}

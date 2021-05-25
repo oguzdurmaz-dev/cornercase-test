@@ -1,0 +1,11 @@
+.controlPanel {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin:50px 0 0 0;
+}
+.countDown {background: url("/images/count_down.png") 0 0 no-repeat;}
+.countDown:HOVER{background: url("/images/count_down_hover.png")}
+.countUp{background: url("/images/count_up.png") 0 0 no-repeat;}
+.countUp:HOVER{background: url("/images/count_up_hover.png") }
+.counter {width: 64px; height: 64px;display: inline-flex;border:0;cursor: pointer;}
