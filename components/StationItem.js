@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "@/styles/StationItem.module.css";
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import AppContext from "@/context/AppContext";
 export default function StationItem({ station }) {
   const { currentStation, setCurrentStation } = useContext(AppContext);

@@ -1,6 +1,5 @@
-import styles from "@/styles/Home.module.css";
 import { API_URL } from "@/config/index";
-import StationsPage from "./stations/index";
+import StationsPage from "@/components/Stations";
 import Layout from "@/components/Layout";
 export default function Home({ data }) {
   return (
@@ -11,7 +10,7 @@ export default function Home({ data }) {
 }
 /*Stations Fetch*/
 export async function getServerSideProps() {
-  const res = await fetch(`${API_URL}/stations`);
+  const res = await fetch(`${API_URL}`);
   const data = await res.json();
   return {
     props: { data },
