@@ -1,7 +1,10 @@
 ul.stationList {
   list-style: none;
   padding: 40px;
+  flex-direction: column;
+  display: flex;
 }
+
 ul.stationList li a {
   font-size: 44px;
   font-weight: normal;
@@ -17,6 +20,33 @@ ul.stationList li:last-child {
   padding-bottom: 0;
   margin-bottom: 0;
 }
-ul.stationList li a span {font-weight: bold;float: right;}
-.stationsContainer {max-height: 772px;
-    overflow: hidden;}
+ul.stationList li a span {
+  font-weight: bold;
+  float: right;
+}
+.stationsContainer {
+  max-height: 772px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+/* width */
+.stationsContainer::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+.stationsContainer::-webkit-scrollbar-track {
+
+  border-radius: 0;
+}
+ 
+/* Handle */
+.stationsContainer::-webkit-scrollbar-thumb {
+  background: #a2abbd;
+  border-radius: 0;
+}
+
+/* Handle on hover */
+.stationsContainer::-webkit-scrollbar-thumb:hover {
+  background: #a2abbd;
+}

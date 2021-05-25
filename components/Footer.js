@@ -9,7 +9,7 @@ export default function FooterPage() {
       {currentStation ? (
         <>
           <span className={styles.subHead}>CURRENTLY PLAYING</span>
-          <h4 className={styles.current}>{currentStation}</h4>
+          <h4 className={styles.current}>{currentStation.name}</h4>
         </>
       ) : null}
     </div>

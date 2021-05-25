@@ -5,7 +5,7 @@ const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
 
-    const [currentStation,setCurrentStation]=useState("");
+    const [currentStation,setCurrentStation]=useState(null);
 
     return (
         <AppContext.Provider value={{ currentStation,setCurrentStation }}>

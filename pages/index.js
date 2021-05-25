@@ -11,7 +11,7 @@ export default function Home({ data }) {
 }
 /*Stations Fetch*/
 export async function getServerSideProps() {
-  const res = await fetch(`${API_URL}/api/stations`);
+  const res = await fetch(`${API_URL}/stations`);
   const data = await res.json();
   return {
     props: { data },

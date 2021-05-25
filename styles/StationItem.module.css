@@ -9,3 +9,5 @@
 .countUp{background: url("/images/count_up.png") 0 0 no-repeat;}
 .countUp:HOVER{background: url("/images/count_up_hover.png") }
 .counter {width: 64px; height: 64px;display: inline-flex;border:0;cursor: pointer;}
+.orderFirst {order:1;border: 0 !important;}
+
