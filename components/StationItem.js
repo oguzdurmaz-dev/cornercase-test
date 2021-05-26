@@ -1,9 +1,10 @@
 import Image from "next/image";
 import styles from "@/styles/StationItem.module.css";
-import { useContext } from "react";
+import {useContext,useState} from "react";
 import AppContext from "@/context/AppContext";
 export default function StationItem({ station }) {
   const { currentStation, setCurrentStation } = useContext(AppContext);
+  const [volume,setVolume]=useState(50);
 
   const onClickHandler = (e) => {
     e.preventDefault();
@@ -11,23 +12,23 @@ export default function StationItem({ station }) {
     currentStation &&
       currentStation.id === station.id &&
       setCurrentStation(null);
+ 
   };
 
-  const classSettings = (_) => {
-    currentStation && currentStation.id === station.id
-      ? styles.orderFirst
-      : station.id === 1 && currentStation !== station.id
-      ? "orderLast"
-      : null;
-  };
 
+
+  const volumeUp=_=>{
+  setVolume(volume+1)
+  }
+  const volumeDown=_=>{
+    setVolume(volume-1)
+    }
   return (
     <>
       <li
-        className={classSettings}
         style={
           currentStation && currentStation.id !== station.id
-            ? { 'order': station.id }
+            ? { order: station.id }
             : null
         }
       >
@@ -37,11 +38,14 @@ export default function StationItem({ station }) {
         </a>
         {currentStation && currentStation.id === station.id ? (
           <div className={styles.controlPanel}>
-            <button
+            <button onClick={volumeDown} 
               className={`${styles.countDown} ${styles.counter}`}
             ></button>
+            <div>
             <Image src="/images/radio_img.png" width="288" height="288" />
-            <button className={`${styles.countUp} ${styles.counter}`}></button>
+            <p>{volume}</p>
+            </div>
+            <button onClick={volumeUp} className={`${styles.countUp} ${styles.counter}`}></button>
           </div>
         ) : null}
       </li>

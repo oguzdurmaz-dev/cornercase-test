@@ -19,5 +19,9 @@
 .subHead {
   font-size: 22px;
   color: #edae61;
-  width: 100%;
+  width: 100%;font-weight: 600;
 }
+@media only screen and (max-width: 767px) {
+  .footer {box-shadow: none;border-radius: 0;}
+  }
+  
